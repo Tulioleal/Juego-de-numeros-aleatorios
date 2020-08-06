@@ -3,11 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container">
 
+        <div class="row-lg mt-3">
+            <h1>Juego de numeros aleatorios</h1>
+        </div>
+
+        <hr>
+
+        <div class="row mb-5">
+            <div class="col-lg-5">
+                <h4>Primer número</h4>
+                <input class="mx-1 px-5 form-control form-control-lg" id='primerDigito' max="9" min="0" type="number">
+
+                <h4 class="mt-4">Segundo número</h4>
+                <input  class="mx-1 px-5 form-control form-control-lg" id='segundoDigito' max="9" min="0" type="number">
+
+                <h4 class="mt-4">Tercer número</h4>
+                <input class="mx-1 px-5 form-control form-control-lg" id='tercerDigito' max="9" min="0" type="number">
+
+                <h4 class="mt-4">Cuarto número</h4>
+                <input class="mx-1 px-5 form-control form-control-lg" id='cuartoDigito' max="9" min="0" type="number">
+
+            </div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-4">
+                <h2>Estadísticas</h2>
+                <hr>
+                <div class="row">
+                    <h4 class="col-lg-8 mt-5">Números Correctos:</h4>
+                    <p id="numCorrectos" class="mt-5"></p>
+                </div>
+                <div class="row">
+                    <h4 class="col-lg-8 mt-3">Numeros Buenos:</h4>
+                    <p id="numBuenos" class="mt-3"></p>
+                </div>
+                <div class="row">
+                    <h4 class="col-lg-8 mt-3">Intentos:</h4>
+                    <p id="intentos" class="mt-3"></p>
+                </div>
+                <div class="row">
+                    <button class="btn btn-success m-5" id="probar">Probar</button>
+                    <button class="btn btn-danger m-5" id="reiniciar">Reiniciar</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-2">
+                <h3>Reglas</h3>
+            </div>
+            <div class="col-lg-4">
+                <ul>
+                    <li>La máquina genera 4 números <strong>QUE NO SE REPITEN</strong> de forma aleatoria del 0-9</li>
+                    <li>Tu objetivo es coincidir los 4 numeros en valor y posicion con los que generó previamente la máquina.</li>
+                    <li>Tienes <strong>todos</strong> los intentos que quieras.</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <ul>
+                    <li>Numeros Correctos: Digitos que <strong>coinciden</strong> con uno de los numeros generados y ademas <strong>comparten la misma posición</strong>.</li>
+                    <li>Numeros Buenos: Digitos que <strong>coinciden</strong> con uno de los números generados pero <strong>NO</strong> comparten la misma posición.</li>
+                    <li>Numeros Malos: Digitos que <strong>NO</strong> coinciden con <strong>ninguno</strong> de los numeros generados.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
